@@ -1,0 +1,53 @@
+.all-rights {
+    border-top: 1px solid $dark;
+    background-color: $bg-dark;
+    padding: 26px 0 29px; 
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left {
+        display: flex;
+        gap: 24px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        color: $light-color;
+    }
+
+    .link-studio {
+        font-weight: 400;
+        font-size: 12px;
+        color: $light-color;
+        position: relative;
+        transition: 0.2s ease-in-out color;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -20px;
+            width: 16px;
+            height: 16px;
+            background: url('../../icons/heart_green.svg') center center no-repeat;
+        }
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    .link-top {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: $light-color;
+        opacity: 0.6;
+        transition: 0.2s ease-in-out color, 0.2s ease-in-out opacity;
+        &:hover {
+            opacity: 1;
+            color: $accent-color;
+        }
+    }
+}

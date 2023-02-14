@@ -1,0 +1,53 @@
+.complete-look {
+    margin-top: 180px;
+    padding-bottom: 100px;
+    &__content {
+        display: flex;
+        gap: 135px;
+    }
+    &__photo {
+        margin-top: 60px;
+        display: block;
+        width: 495px;
+        height: 600px;
+    }
+    &__slider {
+        max-width: 600px;
+        user-select: none;
+    }
+    &__slide {
+        display: block;
+        .card-top {
+            background-color:#f4f5f7;
+        }
+    }
+
+    .swiper-wrapper {
+        padding-top: 60px;
+    }
+    &__next, &__prev {
+        top: 24px;
+        right: 0;
+    }
+    &__prev {
+        right: 50px;
+    }
+    &__pagination {
+        span {
+            position: relative;
+            height: 15px;
+            width: 30px;
+            background-color: transparent;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #424551;
+                height: 3px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.trending {
+    padding: 88px 0;
+    background-color: #E5E8ED;
+    .container {
+        position: relative;
+    }
+    &__slider {
+        margin-top: 60px;
+        overflow: hidden;
+        user-select: none;
+    }
+    .card-top {
+        background-color: #f4f5f7;
+    }
+
+    &__button-prev, &__button-next {
+        top: 48px;
+    }
+    &__button-prev {
+        right: 36px;
+    }
+    &__button-next {
+        right: -12px;
+    }
+    
+    &__button {
+        display: block;
+        margin: 105px auto 0;
+    }
+}

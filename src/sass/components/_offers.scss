@@ -1,0 +1,52 @@
+.special-offer {
+    padding: 8px 0;
+    background-color: $accent-color;
+    min-height: 34px;
+    .swiper-offers {
+        position: relative;
+        margin: 0 auto;
+        max-width: 280px;
+        overflow: hidden;
+        padding: 0 16px;
+    }
+    .offers-slide {
+        text-align: center;
+        color: $light-color;
+        .offers-text {
+            font-family: 'Ubuntu';
+            font-weight: 900;
+            font-size: 12px;
+        }
+        .offers-link {
+            font-size: 12px;
+            text-decoration-line: underline;
+        }
+    }
+    .offers-button-prev,
+    .offers-button-next {
+        position: absolute;
+        top: 3px;
+        background-color: $accent-color;
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+            .offers-prev-img, 
+            .offers-next-img {
+                fill: $dark;
+            }
+        }
+    }
+    .offers-button-prev {
+        left: 0;
+    }
+    .offers-button-next {
+        right: 0;
+    }
+    .offers-prev-img, 
+    .offers-next-img {
+        width: 16px;
+        height: 16px;
+        fill: $light-color;
+        transition: 0.2s ease-in-out fill;
+    }
+}

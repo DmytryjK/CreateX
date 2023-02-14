@@ -1,0 +1,75 @@
+.main {    
+    position: relative;
+    &__subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        color: #1E212C;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__title {
+        margin-top: 28px;
+        margin-bottom: 70px;
+        font-weight: 900;
+        font-size: 72px;
+        color: #1E212C;
+        letter-spacing: 1px;
+    }
+
+    &__buttons {
+        .btn-fill {
+            margin-left: 21px;
+        }
+    }
+
+    .swiper-main {
+        overflow: hidden;
+        .swiper-slide {
+            padding: 145px 0 250px;
+            background: url('../../images/main-img.png') center center/cover no-repeat;
+            min-height: 800px;
+        }
+    }
+
+    &-button-prev, &-button-next {
+        background-color: rgb(255, 244, 224);
+        &:hover {
+            background-color: rgb(255, 244, 224);
+            .main-prev-img, .main-next-img {
+                fill: $accent-color;
+            }
+        }
+    }
+
+    .main-button-prev {
+        left: 32px;
+    }
+    .main-button-next {
+        right: 32px;
+    }
+
+    .main-pagination {
+        left: auto !important;
+        bottom: 180px !important;
+        width: auto !important;
+        .swiper-pagination-bullet {
+            position: relative;
+            width: 178px;
+            height: 30px;
+            border-radius: 0;
+            border-bottom: 2px solid $dark;
+            background-color: transparent;
+            &-active {
+                border-bottom: 2px solid $dark-text;
+            }
+        }
+        .bullet-number {
+            position: absolute;
+            font-weight: 700;
+            font-size: 28px;
+            top: -20px;
+            left: 0;
+        }
+    }
+}

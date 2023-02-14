@@ -1,0 +1,322 @@
+.content {
+    .container {
+        display: flex;
+        gap: 60px;
+    }
+    .filter {
+        display: block;
+        width: 255px;
+        &.active {
+            display: none;
+        }
+        &__list {
+            width: 255px;
+        }
+        &__item {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E5E8ED;
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s ease-in-out all;
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #1E212C;
+            line-height: 160%;
+            flex-grow: 1;
+            user-select: none;
+        }
+        &__decorate-element {
+            display: block;
+            background-color: red;
+            width: 16px;
+            height: 16px;
+            background: url('../../icons/women-clothes/plus.svg') center center no-repeat;
+            &.active {
+                background: url('../../icons/women-clothes/minus.svg') no-repeat center center;
+            }
+        }
+        &__form {
+            max-height: 0px;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.2s ease-in-out all;
+            &.active {
+                opacity: 1;
+                max-height: 300px;
+                overflow: visible;
+            }
+        }
+        .form {
+            &__search {
+                &-label {
+                    position: relative;
+                    display: block;
+                }
+                &-input {
+                    margin-top: 16px;
+                    background: #FFFFFF;
+                    border: 1px solid #D7DADD;
+                    border-radius: 4px;
+                    padding: 9px 32px 9px 12px;
+                    position: relative;
+                    width: 100%;
+                    outline-color: #64656b;
+                    &::placeholder {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 150%;
+                        color: #64656b;
+                    }
+                }
+                &-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(calc(-50% + 8px));
+                    background: url('../../icons/women-clothes/search.svg') center center no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    right: 12px;
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+                }
+            }
+
+            &__checkboxes {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding: 2px 0;
+                margin-top: 16px;
+                max-height: 166px;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                    border-radius: 20px;
+                    background-color: #ececec;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 20px;
+                    border: 3px solid rgb(165, 165, 165);
+                }
+                .checkbox {
+                    &__label {
+                        display: flex;
+                        gap: 15px;
+                        position: relative;
+                    }
+                    &__input {
+                        margin-right: 12px;
+                        cursor: pointer;
+                        appearance: none;
+                        &:checked ~ .checkbox__custom {
+                            border-color: #17696A;
+                            background-image: url('../../icons/women-clothes/checked.svg');
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    &__custom {
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 16px;
+                        height: 16px;
+                        background-color: transparent;
+                        border: 1px solid #B3B7BC;
+                        border-radius: 3px;
+                    }
+                    &__name {
+                        font-size: 14px;
+                        cursor: pointer;
+                        user-select: none;
+                        span {
+                            color: #9A9CA5;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__item-colors {
+            .form {
+                &__checkboxes {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    column-gap: 10px;
+                    row-gap: 8px;
+                    max-height: 196px;
+                    .checkbox{
+                        &__label {
+                            width: 52px;
+                            flex-direction: column;
+                            row-gap: 10px;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        &__custom {
+                            position: relative;
+                            width: 24px;
+                            height: 24px;
+                            padding: 5px;
+                            border-radius: 100%;
+                            position: static;
+                            transform: none;
+                            cursor: pointer;
+                            border: none;
+                            z-index: 1;
+                            &:after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 32px;
+                                height: 32px;
+                                border: 1px solid #D7DADD;
+                                border-radius: 100%;
+                                top: 50%;
+                                left: 50%;
+                                transform: translateX(-50%) translateY(calc(-50% - 7px));
+                            }
+                            &.black {
+                                background-color: black;
+                            }
+                            &.lightblue {
+                                background-color: lightblue;
+                            }
+                            &.yellow {
+                                background-color: rgb(238, 238, 144);
+                            }
+                            &.green {
+                                background-color: rgb(94, 202, 94);
+                            }
+                        }
+                        &__input:checked ~ .checkbox__custom:after {
+                            border: 1px solid $accent-color;
+                            width: 32px;
+                            height: 32px; 
+                        }
+                        &__input:checked ~ .checkbox__custom {
+                            position: relative;
+                            width: 24px;
+                            height: 24px;
+                            padding: 5px;
+                            border-radius: 100%;
+                            position: static;
+                            transform: none;
+                            cursor: pointer;
+                            border: none;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__item-price {
+            margin-top: 20px;
+            border-bottom: none;
+            .rs-container {
+                top: 50px;
+                height: 30px;
+                .rs-tooltip {
+                    min-width: 48px;
+                    height: 22px;
+                    top: 7px;
+                    left: 4px;
+                    padding: 5px;
+                    background: #424551;
+                    border: none;
+                    color: $light-color;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                .rs-pointer {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 100%;
+                    background-color: #17696A;
+                    box-shadow: none;
+                    border-color: transparent;
+                    &:before, &:after {
+                        display: none;
+                    }
+                }
+                .rs-selected {
+                    height: 2px;
+                }
+                .rs-bg {
+                    height: 2px;
+                }
+                .rs-scale {
+                    display: none;
+                }
+            }
+            .values-inputs {
+                margin-top: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .value-start, .value-end {
+                    padding: 9px 12px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 150%;
+                    color: #424551;
+                    width: 110px;
+                    height: 36px;
+                    border: 1px solid #D7DADD;
+                    border-radius: 4px;
+                    outline-color: #959799;
+                }
+                span {
+                    display: inline-block;
+                    width: 8px;
+                    height: 1px;
+                    background-color: #424551;
+                }
+            }
+        }
+
+        .range-wrapper {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.2s ease-in-out all;
+            &.active {
+                overflow: visible;
+                max-height: 300px;
+                opacity: 1;
+            }
+        }
+    }
+    .products {
+        transition: 0.2s ease-in-out all;
+        .product-cards {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 60px; 
+            &__link {
+                display: block;
+            }
+        }
+        .card-top {
+            background-color: #f4f5f7;
+        }
+    }
+}

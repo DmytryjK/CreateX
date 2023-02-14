@@ -1,0 +1,41 @@
+.benefits {
+    margin-top: 120px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 90px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 240px;
+        &:not(:last-child) {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 118.75%;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(218,219,221,0) 0%,rgba(218,219,221,0.5) 25%,rgba(218,219,221,1) 50%,rgba(218,219,221,0.5) 75%,rgba(218,219,221,0) 100%);
+            }
+        }
+    }
+    &__img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        color: $bg-dark;
+        margin-bottom: 16px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark;
+    }
+}

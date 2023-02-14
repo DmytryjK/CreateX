@@ -1,0 +1,48 @@
+.store-app {
+    background-color: $bg-dark;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 140px;
+    }
+    .store-image {
+        flex-shrink: 0;
+        flex-basis: 490px;
+        height: 300px;
+        position: relative;
+        img {
+            position: absolute;
+            top: -30px;
+            bottom: 0;
+            width: 100%;
+            height: 330px;
+            object-fit: contain;
+            object-position: top;
+        }
+    }
+
+    .store__title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 130%;
+        color: $light-color;
+        margin-bottom: 48px;
+    }
+
+    .store__link {
+        &-apple, &-android {
+            display: inline-block;
+            width: 162px;
+            height: 48px;
+        }
+        &-apple {
+            background: url('../../images/store-app/app-store.svg') center center/cover no-repeat;
+            margin-right: 21px;
+        }
+        
+        &-android {
+            background: url('../../images/store-app/google-play.svg') center center/cover no-repeat;
+        }
+    }
+}

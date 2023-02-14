@@ -1,0 +1,83 @@
+.btn-fill, .btn-transparent {
+    display: inline-block;
+    font-family: 'Lato';
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+}
+
+.btn-transparent {
+    color: $accent-color;
+    border: none;
+    box-shadow: 0px 0px 0px 1px $accent-color inset;
+    &:hover {
+        background-color: $accent-color;
+        color: $light-color;
+    }
+}
+
+.btn-fill {
+    border: none;
+    background-color: $accent-color;
+    color: $light-color;
+    &:hover {
+        background-color: #145C5D;
+        color: $light-color;
+    }
+}
+
+.btn-fill_largest, .btn-transparent_largest {
+    height: 44px;
+    font-size: 14px;
+    color: #FFFFFF;
+    width: 255px;
+}
+
+.btn-fill_large, .btn-transparent_large {
+    padding: 0 40px;
+    font-size: 16px;
+    line-height: 52px;
+}
+
+.btn-fill_regular, .btn-transparent_regular {
+    padding: 0 32px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+.btn-fill_small, .btn-transparent_small {
+    padding: 0 24px;
+    font-size: 12px;
+    line-height: 36px;
+}
+
+
+
+/*slider buttons*/
+.button__prev, .button__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.2s ease-in-out background-color;
+    &:hover {
+        background-color: $accent-color;
+        .button__prev-img, .button__next-img {
+            fill: #fff;
+        }
+    }
+}
+
+.button__prev-img, .button__next-img {
+    transition: 0.2s ease-in-out fill;
+}

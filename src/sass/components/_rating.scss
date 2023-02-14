@@ -1,0 +1,15 @@
+.rating {
+    display: flex;
+    gap: 2px;
+    .rating-img {
+        display: block;
+        width: 14px;
+        height: 14px;
+    }
+    &_active {
+        background: url('../../icons/star-small.svg') center center no-repeat;
+    }
+    &_none {
+        background: url('../../icons/star-small_transprnt.svg') center center no-repeat;
+    }
+}

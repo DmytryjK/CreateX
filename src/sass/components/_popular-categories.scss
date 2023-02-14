@@ -1,0 +1,41 @@
+.popular-categories {
+    padding-bottom: 180px;
+    
+    .categories {
+        &__title {
+            text-align: center;
+        }
+        &__list {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        &__link {
+            &:hover {
+                .categories__img {
+                    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+                }
+            }
+        }
+        &__img {
+            display: block;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 25px;
+            transition: 0.1s ease-in-out box-shadow;
+            
+        }
+        &__subtitle {
+            text-align: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #1E212C;
+        }
+    }
+    
+}

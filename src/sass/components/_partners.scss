@@ -1,0 +1,9 @@
+.partners {
+    margin-top: 118px;
+    margin-bottom: 120px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 102px;
+    }
+}

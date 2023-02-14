@@ -1,0 +1,16 @@
+.sale-price {
+    display: flex;
+    align-items: center;
+    .card-price {
+        font-weight: 400;
+        font-size: 18px;
+        text-decoration: line-through;
+        color: #787A80;
+        &_sale {
+            font-weight: 700;
+            font-size: 24px;
+            color: $danger;
+            margin-right: 12px;
+        }
+    }
+}
